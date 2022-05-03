@@ -113,7 +113,7 @@ export default function Features({ children }) {
                     top: findPosition(document.getElementById("ctaElement")),
                     left: 0,
                     behavior: 'smooth'
-                  })} />
+                  })} text={"QUERO AUMENTAR MEU FATURAMENTO"} />
                 </div>
               </div>
             </div>

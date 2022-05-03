@@ -1,22 +1,30 @@
-import Navbar from './Navbar'
-import Footer from './Footer'
+import { Contact } from './CallToAction'
+import logo from "../public/imgs/drop_link_fy.png"
+import Link from 'next/link'
 
-export default function Layout({ children }) {
-    return (
-        <>
-            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-                <div className="container flex flex-wrap justify-between items-center mx-auto">
-                    <div className="flex items-center md:order-1">
-                        Whats
-                    </div>
-                    <div className="flex items-center md:order-2">
-                        Logo
-                    </div>
-                    <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-3" id="mobile-menu-2">
-                        Login
-                    </div>
-                </div>
-            </nav>
-        </>
-    )
+export default function Navbar({ children }) {
+  return (
+    <>
+      <nav className="px-2 sm:px-4 py-2.5">
+        <div className="container flex flex-wrap justify-between items-center mx-auto pt-5">
+          <div className="hidden md:flex md:order-1 w-1/3">
+            <div className='w-3/4'>
+              <Contact />
+
+            </div>
+          </div>
+          <div className="flex w-1/3 items-center md:order-2">
+            <img className='md:ml-0 ml-10' src={logo.src} />
+          </div>
+          <div className="flex w-1/3 justify-between md:flex md:w-auto md:order-3" id="mobile-menu-2">
+            <Link href="https://app.droplinkfy.com/login/">
+              <button className='bg-gradient-to-b from-[#33dba3] to-[#25c7ca] px-5 text-white py-2 rounded-full'>
+                Fazer Login
+              </button>
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </>
+  )
 }
