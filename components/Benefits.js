@@ -1,66 +1,64 @@
+import first from "../public/imgs/1.png"
+import sc from "../public/imgs/2.png"
+import tr from "../public/imgs/3.png"
+import fr from "../public/imgs/4.png"
+import ft from "../public/imgs/5.png"
+import cube from "../public/imgs/cube.png"
+import { Anchor, findPosition } from "./CallToAction"
+
 export default function Benefits({ children }) {
   return (
     <>
-      <section>
+      <section className="relative">
         <div className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:text-center">
-              <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">A better way to send money</p>
-              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+            <div className="lg:text-center relative z-20">
+              <h2 className="mt-2 text-3xl leading-8 text-center mb-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Vantagens do <span className="text-[#1081fa] font-semibold tracking-wide">Droplinkfy</span></h2>
+              <img src={first.src} className={"mx-auto"} />
             </div>
-            <div className="mt-10">
-              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                <div className="relative">
-                  <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                      <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                      </svg>
-                    </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</p>
-                  </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-                </div>
+            <div className="relative">
+              <div className="w-0 md:w-0.5 bg-[#49c9fc] scale-x-50 absolute h-full left-1/2 -translate-x-1/2 -z-1 scale-y-125"></div>
+              <div className="absolute left-1/2 top-1/2 z-10 w-24 h-24 -translate-x-1/2">
+                <img src={cube.src} className={"w-full h-full"} />
+              </div>
 
-                <div className="relative">
-                  <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                      <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                      </svg>
-                    </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">No hidden fees</p>
-                  </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-                </div>
+              <div className="bg-gradient-to-b pt-18 -mt-5 from-[#e9fcff] to-blue-0 rounded-t-full overflow-visible">
+                <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                  <div className="relative px-10">
+                    <img src={sc.src} className={"mx-auto bg-white rounded-full shadow-2xl m-5"} />
+                    <dd className="mt-2 text-center font-bold uppercase text-lg mx-10 text-[#1081fa]">MAIS RAPIDEZ EM SEU PROCESSAMENTO</dd>
+                    <dd className="mt-2 text-center text-sm mx-10 text-black font-light">Chega de processar pedidos manualmente em plataformas que não possuem integração. Com a Droplinkfy você pode processar até 60 pedidos por minuto com apenas um clique.</dd>
+                  </div>
+                  <div className="relative px-10">
+                    <img src={tr.src} className={"mx-auto bg-white rounded-full shadow-2xl m-5"} />
 
-                <div className="relative">
-                  <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                      <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Transfers are instant</p>
-                  </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-                </div>
+                    <dd className="mt-2 text-center font-bold uppercase text-lg mx-10 text-[#1081fa]">PAGUE MENOS EM SEUS PRODUTOS</dd>
+                    <dd className="mt-2 text-center text-sm mx-10 text-black font-light">Produtos com fornecedores nacionais e internacionais com preços até 70% mais baratos do que o aliexpress.</dd>
+                  </div>
+                  <div className="relative px-10">
+                    <img src={fr.src} className={"mx-auto bg-white rounded-full shadow-2xl m-5"} />
 
-                <div className="relative">
-                  <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                      <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                      </svg>
-                    </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Mobile notifications</p>
-                  </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-                </div>
-              </dl>
+                    <dd className="mt-2 text-center font-bold uppercase text-lg mx-10 text-[#1081fa]">CRIAÇÃO DE CONTAS COM ÚNICO CLIQUE</dd>
+                    <dd className="mt-2 text-center text-sm mx-10 text-black font-light">Crie várias contas com apenas um clique. Rápido e prático. Necessário ter números virtuais e e-mails para criação das contas.</dd>
+                  </div>
+                  <div className="relative px-10">
+                    <img src={ft.src} className={"mx-auto bg-white rounded-full shadow-2xl m-5"} />
+
+                    <dd className="mt-2 text-center font-bold uppercase text-lg mx-10 text-[#1081fa]">TUDO AUTOMATIZADO</dd>
+                    <dd className="mt-2 text-center text-sm mx-10 text-black font-light">Trabalhando dentro das políticas da ferramenta, nosso robô consegue automatizar todo o processo de criação de contas, processamento de pedidos e inclusão de códigos de rastreio no shopify</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="container mx-auto w-2/5 mb-12 relative bg-white pb-12">
+          <Anchor onClick={() => window.scrollTo({
+            top: findPosition(document.getElementById("ctaElement")),
+            left: 0,
+            behavior: 'smooth'
+          })} text={"Quero lucrar mais"} />
+
         </div>
       </section>
     </>
