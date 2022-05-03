@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700&subset=latin,latin-ext');
 
 html,
 body {
@@ -18,3 +19,37 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.box {
+  --b:10px;   /* thickness of the border */
+  --c:#0050c7;   /*color of the border */
+  --w:45px;  /* width of border */
+  
+
+  border: var(--b) solid transparent; /* space for the border */
+  --g:#0000 90deg, var(--c) 0;
+  background:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+  background-size:var(--w) var(--w);
+  background-origin:border-box;
+  background-repeat:no-repeat;
+  
+  /*Irrelevant code*/  
+  /* width:200px;
+  height:100px; */
+  box-sizing:border-box;
+  margin:5px;
+  display:inline-flex;
+  font-size:30px;
+  justify-content:center;
+  align-items:center;
+  line-height:90px;
+}
+
+
+.video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed { position: absolute; top: 15px; left: 15px; width: calc(100% - 30px); height: calc(100% - 30px); }
