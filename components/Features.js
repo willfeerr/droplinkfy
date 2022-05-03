@@ -5,7 +5,7 @@ export default function Features({ children }) {
   return (
     <>
       <div className="relative bg-[#e4fbff]">
-        <img className="relative md:absolute -mb-24" src={bgBottom.src} alt="step" />
+        <img className="relative md:absolute scale-150 translate-x-1/4 md:scale-100 md:translate-x-0 -mb-24" src={bgBottom.src} alt="step" />
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto flex flex-wrap">
             <div className="flex flex-wrap w-full">

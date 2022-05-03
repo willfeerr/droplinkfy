@@ -9,7 +9,7 @@ export default function Princing({ children, CTARef }) {
           <img className="mx-auto" src={ing.src}/>
         </div>
         <h2 className="text-center text-4xl mb-4 font-light relative z-10 ">
-          Confira nosso <span className="font-bold">plano</span>
+          Confira nosso <span className="font-bold text-[#1081fa]">plano</span>
         </h2>
         <div style={{ width: 380 }} className="mx-auto overflow-visible mb-10" >
           <div className="h-full bg-white p-6 rounded-lg border-2 border-gray-100 flex flex-col relative overflow-hidden shadow-xl">
@@ -29,7 +29,7 @@ export default function Princing({ children, CTARef }) {
               </span>
 
             </h1>
-            <p className="text-xs text-gray-500 mt-3 pb-4 mb-4 border-b border-gray-200">
+            <p className="text-md text-gray-500 mt-3 pb-4 mb-4 border-b border-gray-200">
               + 3% pelo valor faturado <br />
               *valor cobrado apenas por pedidos processados pela ferramenta.
             </p>

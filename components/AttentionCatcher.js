@@ -3,7 +3,7 @@ export default function AttentionCatcher({ children }) {
   return (
     <>
       <section className="container mx-auto justify-center w-full h-full scale-90">
-        <h2 className="mt-2 text-3xl leading-8 text-center mb-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Assista o vídeo até o final e veja <span className="text-[#1081fa] font-semibold tracking-wide">Como Funciona</span></h2>
+        <h2 className="hidden text-6xl md:block mt-2 text-center mb-8 font-extrabold tracking-tight text-gray-900">Assista o vídeo até o final e veja <span className="text-[#1081fa] font-semibold tracking-wide">Como Funciona</span></h2>
         <div className="box p-3 mx-auto rounded-lg w-full video-container">
           <iframe
             width={"100%"}
