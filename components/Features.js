@@ -1,4 +1,5 @@
 import bgBottom from "../public/imgs/bg_bottom.jpg";
+import { Anchor, findPosition } from "./CallToAction";
 
 export default function Features({ children }) {
   return (
@@ -106,6 +107,13 @@ export default function Features({ children }) {
                       Obs: Necessário possuir proxy e números de telefone para fazer a criação de contas para o processamento de pedidos. Ferramenta possui tutoriais de instalação e indicações de fornecedores de proxy, números e e-mails.
                     </h2>
                   </div>
+                </div>
+                <div className="container mx-auto mt-8">
+                  <Anchor onClick={() => window.scrollTo({
+                    top: findPosition(document.getElementById("ctaElement")),
+                    left: 0,
+                    behavior: 'smooth'
+                  })} />
                 </div>
               </div>
             </div>

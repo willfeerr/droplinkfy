@@ -1,20 +1,11 @@
-import Image from 'next/image'
-
 export default function Footer({ children }) {
     return (
         <>
-            <footer className={"text-center pb-4 bg-[#e4fbff]"}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={""}>
-                        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                    </span>
-                </a>
-            </footer>
+            <div class="grid grid-cols-3 gap-8 text-center text-sm font-thin bg-[#e4fbff]">
+                <div>Copyright © Droplinkfy 2022</div>
+                <div>E-mail: suporte@droplinkfy.com</div>
+                <div>*Não somos responsáveis pelos bloqueios de contas dos usuários</div>
+            </div>
         </>
     )
 }
