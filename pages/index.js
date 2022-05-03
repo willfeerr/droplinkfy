@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import AttentionCatcher from '../components/AttentionCatcher'
 import Benefits from '../components/Benefits'
 import Features from '../components/Features'
